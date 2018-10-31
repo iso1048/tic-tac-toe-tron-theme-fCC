@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Geo');
+@mixin flex-centering(){
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+@mixin linear-gradient($LorR, $color){
+  background: $color;
+  background: linear-gradient(to $LorR, transparent, $color);
+}
+@mixin Tri($color){
+  border-style: solid;
+  border-width: 0 0 2.5rem 2.5rem;
+  border-color: $color;
+}
+html{
+  font-size: 10px;
+  font-family:'Geo', sans-serif;
+  color:white;
+}
+* {
+  //border: white dotted 1px;
+  box-sizing: border-box;
+}
+
+$light-blue: rgb(111,195,223);
+$orange: rgb(255, 119, 0);
+$border: rgb(34, 57, 64);
+
+body {
+  margin:0px;
+  background:rgb(8,10,14);
+}
+#welcome-player{
+  height:100vh;
+  @include flex-centering();
+  & #p1 {
+    width: 268px;
+    font-size:2.5rem;
+    letter-spacing: 0.2rem;
+  }
+}
+#choose-player {
+  @include flex-centering();
+  display:none;
+  & div {
+    width: 10rem;
+    height:10rem;
+    @include flex-centering();
+    transition: all 0.4s ease;
+    &:hover {
+      -moz-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2); 
+      cursor: pointer;
+    }
+  }
+  & #or {
+    font-size: 2.5rem;
+    text-align:center;
+    width:8rem;
+  }
+}
+.ion-ios-close-empty{
+    font-size: 15rem;
+    color: white;
+    text-shadow: 0 0 15px $light-blue;
+}
+.ion-ios-circle-outline {
+    font-size: 9rem;
+    color: white;
+    text-shadow: 0 0 25px $orange;
+}
+#contain {
+  display:none;
+  width: 32rem;
+  margin:auto;
+  padding: 6rem 0px 2rem 0px;
+}
+#userDiv{
+  font-size: 2rem;
+  display: grid;
+  grid-template: 2.5rem/2.5rem 27rem 2.5rem;
+  margin-bottom: 2rem;
+  width: 32rem;
+  & #TriL {
+    @include Tri(transparent transparent $light-blue transparent);
+  }
+  & #user {
+    grid-area: 1/2/2/3;
+    text-align:right;
+    @include linear-gradient(left,$light-blue); 
+  }
+  & #xORo {
+    @include flex-centering();
+    font-size: 2.3rem;
+  }
+}//userDiv
+#grid {
+  width: 27rem;
+  margin:auto;
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(3,1fr);
+  & div {
+    height: 9rem;
+    border-top: 1px solid $border;
+    border-left: 1px solid $border;
+    @include flex-centering()
+  }
+  #_7, #_8, #_9 {
+    border-bottom: 1px solid $border;
+  }
+  #_3, #_6,#_9 {
+    border-right: 1px solid $border;
+  }
+}
+#resetDiv, #soundDiv {
+  font-size: 2rem;
+  display: grid;
+  grid-template: 2.5rem/29.5rem 2.5rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+#resetDiv {
+  margin: 2rem auto;
+}
+.TriR {
+  @include Tri(transparent transparent transparent $light-blue);
+}
+.TriR_hover {
+  @include Tri(transparent transparent transparent $orange);
+}
+.sound, .reset {
+  @include linear-gradient(right, $light-blue);
+}
+.sound_reset_hover {
+  @include linear-gradient(right, $orange);
+}
+#endOfLine p {
+  width: 200px;
+}
+#draw p {
+  width: 90px;
+}
+#endOfLine, #draw {
+  display:none;
+  height:100vh;
+  @include flex-centering();
+  & p {
+    //border: white dotted 1px;
+    font-size:2.5rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+
+

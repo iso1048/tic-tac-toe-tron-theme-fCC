@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Geo");
+html {
+  font-size: 10px;
+  font-family: 'Geo', sans-serif;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  background: #080a0e;
+}
+
+#welcome-player {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#welcome-player #p1 {
+  width: 268px;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+}
+
+#choose-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+#choose-player div {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+#choose-player div:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+#choose-player #or {
+  font-size: 2.5rem;
+  text-align: center;
+  width: 8rem;
+}
+
+.ion-ios-close-empty {
+  font-size: 15rem;
+  color: white;
+  text-shadow: 0 0 15px #6fc3df;
+}
+
+.ion-ios-circle-outline {
+  font-size: 9rem;
+  color: white;
+  text-shadow: 0 0 25px #ff7700;
+}
+
+#contain {
+  display: none;
+  width: 32rem;
+  margin: auto;
+  padding: 6rem 0px 2rem 0px;
+}
+
+#userDiv {
+  font-size: 2rem;
+  display: grid;
+  grid-template: 2.5rem/2.5rem 27rem 2.5rem;
+  margin-bottom: 2rem;
+  width: 32rem;
+}
+#userDiv #TriL {
+  border-style: solid;
+  border-width: 0 0 2.5rem 2.5rem;
+  border-color: transparent transparent #6fc3df transparent;
+}
+#userDiv #user {
+  grid-area: 1/2/2/3;
+  text-align: right;
+  background: #6fc3df;
+  background: linear-gradient(to left, transparent, #6fc3df);
+}
+#userDiv #xORo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.3rem;
+}
+
+#grid {
+  width: 27rem;
+  margin: auto;
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+}
+#grid div {
+  height: 9rem;
+  border-top: 1px solid #223940;
+  border-left: 1px solid #223940;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#grid #_7, #grid #_8, #grid #_9 {
+  border-bottom: 1px solid #223940;
+}
+#grid #_3, #grid #_6, #grid #_9 {
+  border-right: 1px solid #223940;
+}
+
+#resetDiv, #soundDiv {
+  font-size: 2rem;
+  display: grid;
+  grid-template: 2.5rem/29.5rem 2.5rem;
+}
+#resetDiv:hover, #soundDiv:hover {
+  cursor: pointer;
+}
+
+#resetDiv {
+  margin: 2rem auto;
+}
+
+.TriR {
+  border-style: solid;
+  border-width: 0 0 2.5rem 2.5rem;
+  border-color: transparent transparent transparent #6fc3df;
+}
+
+.TriR_hover {
+  border-style: solid;
+  border-width: 0 0 2.5rem 2.5rem;
+  border-color: transparent transparent transparent #ff7700;
+}
+
+.sound, .reset {
+  background: #6fc3df;
+  background: linear-gradient(to right, transparent, #6fc3df);
+}
+
+.sound_reset_hover {
+  background: #ff7700;
+  background: linear-gradient(to right, transparent, #ff7700);
+}
+
+#endOfLine p {
+  width: 200px;
+}
+
+#draw p {
+  width: 90px;
+}
+
+#endOfLine, #draw {
+  display: none;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#endOfLine p, #draw p {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+}
